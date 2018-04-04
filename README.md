@@ -1,4 +1,4 @@
 # oraclescripts
-scripts on oraclle rdbms
+scripts on oracle rdbms
 
 cout << "HEll0 WoRLD!!";
