@@ -5,3 +5,4 @@ from ( select sum(bytes/1024/1024/1024) data_size
          from dba_temp_files ) b,
      ( select sum(bytes/1024/1024/1024) redo_size
          from sys.v_$log ) c
+/
