@@ -11,6 +11,16 @@ insert into foo (select * from foo);
 ---------------------------
 
 
+create table zeta (id number, date_created date, name varchar2(100));
+
+create sequence zetaseq start with 1 increment by 1;
+
+insert into zeta select zetaseq.nextval, sysdate, 'TYRION LANNISTER' from dual; 
+
+insert into zeta select zetaseq.nextval, sysdate, 'TYRION LANNISTER' from dual connect by level <= 2000000;
+
+----------------------------------------
+
 SQL> create table ziggy (id number, code number, date_created date, name varchar2(42));
  
 Table created.
